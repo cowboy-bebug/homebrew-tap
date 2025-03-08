@@ -5,7 +5,7 @@
 class Kommit < Formula
   desc "Therapeutic approach to git commits with AI-generated messages"
   homepage "https://github.com/cowboy-bebug/kommit"
-  version "0.1.2"
+  version "0.2.0"
   license "MIT"
 
   depends_on "git"
@@ -13,16 +13,16 @@ class Kommit < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cowboy-bebug/kommit/releases/download/v0.1.2/kommit_v0.1.2_darwin_amd64.tar.gz"
-      sha256 "ff313b8b414f48bb61d54f544fefc8f21e0158d47adad7d7d33df0e908ef27d9"
+      url "https://github.com/cowboy-bebug/kommit/releases/download/v0.2.0/kommit_v0.2.0_darwin_amd64.tar.gz"
+      sha256 "9488218857b6e0259d92ee7877c0d51be44808fb269e96d6e61bafb927d92b54"
 
       def install
         bin.install "git-kommit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cowboy-bebug/kommit/releases/download/v0.1.2/kommit_v0.1.2_darwin_arm64.tar.gz"
-      sha256 "f2d5ee36dc63c13ccac00cbdbc0e0709d3c8632c2ca7a1950190f13120edec5f"
+      url "https://github.com/cowboy-bebug/kommit/releases/download/v0.2.0/kommit_v0.2.0_darwin_arm64.tar.gz"
+      sha256 "9136cfbe81b45e794645920fac8781210011a51c958310f34b888ea13be720c2"
 
       def install
         bin.install "git-kommit"
@@ -33,8 +33,8 @@ class Kommit < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cowboy-bebug/kommit/releases/download/v0.1.2/kommit_v0.1.2_linux_amd64.tar.gz"
-        sha256 "b2d52b554954c44ff40ac1e183120b10573ee2b35bc7b6a0fd45042efca2c6d2"
+        url "https://github.com/cowboy-bebug/kommit/releases/download/v0.2.0/kommit_v0.2.0_linux_amd64.tar.gz"
+        sha256 "7512a574c12fdd5db54eaa1c606c85e7e60b67cf44d15bdbb30dcfe85dd43881"
 
         def install
           bin.install "git-kommit"
@@ -43,8 +43,8 @@ class Kommit < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cowboy-bebug/kommit/releases/download/v0.1.2/kommit_v0.1.2_linux_arm64.tar.gz"
-        sha256 "8f7aac01ea5fd688d360b4a11e92c28b5885b8aee41592ef9853d89a837d0cb9"
+        url "https://github.com/cowboy-bebug/kommit/releases/download/v0.2.0/kommit_v0.2.0_linux_arm64.tar.gz"
+        sha256 "ce5f8e2f0f276cd313a032a1285397567f64e8c9d72bd05dd00a9e041f27f79e"
 
         def install
           bin.install "git-kommit"
