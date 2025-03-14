@@ -5,7 +5,7 @@
 class Kommit < Formula
   desc "Therapeutic approach to git commits with AI-generated messages"
   homepage "https://github.com/cowboy-bebug/kommit"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   depends_on "git"
@@ -13,16 +13,16 @@ class Kommit < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cowboy-bebug/kommit/releases/download/v0.3.0/kommit_v0.3.0_darwin_amd64.tar.gz"
-      sha256 "acea6de9b66a9dd9658877d69278af9f8933693e762f98d837b99d1b02a1fb15"
+      url "https://github.com/cowboy-bebug/kommit/releases/download/v0.3.1/kommit_v0.3.1_darwin_amd64.tar.gz"
+      sha256 "24193b8fe085ca619b7e40544f43d3ed6c76e6124adef5db22ff5aee9190427c"
 
       def install
         bin.install "git-kommit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cowboy-bebug/kommit/releases/download/v0.3.0/kommit_v0.3.0_darwin_arm64.tar.gz"
-      sha256 "2e566cf29f712249415da3bd08490ca9818234e904969d4154f1556166054415"
+      url "https://github.com/cowboy-bebug/kommit/releases/download/v0.3.1/kommit_v0.3.1_darwin_arm64.tar.gz"
+      sha256 "902220913733495a5c2bc7dcbf914b428a1d608ea4f579097b1b1a25276877ea"
 
       def install
         bin.install "git-kommit"
@@ -33,8 +33,8 @@ class Kommit < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cowboy-bebug/kommit/releases/download/v0.3.0/kommit_v0.3.0_linux_amd64.tar.gz"
-        sha256 "bc5b47bc39185497bf14fefe8160c75db6c1948755589d9e98a8e20f7537c857"
+        url "https://github.com/cowboy-bebug/kommit/releases/download/v0.3.1/kommit_v0.3.1_linux_amd64.tar.gz"
+        sha256 "5fc411b1cec0df3949d3fd2597284b6d07fc1ac525716d75076032d9398c59e6"
 
         def install
           bin.install "git-kommit"
@@ -43,8 +43,8 @@ class Kommit < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cowboy-bebug/kommit/releases/download/v0.3.0/kommit_v0.3.0_linux_arm64.tar.gz"
-        sha256 "ab81066d96b044933f4527b68a3524cffcff6ef55e111de5813815f8b47f37f7"
+        url "https://github.com/cowboy-bebug/kommit/releases/download/v0.3.1/kommit_v0.3.1_linux_arm64.tar.gz"
+        sha256 "27859eca0418c9d713e9a62c9e700012f8f8dc6da15791ab9dde1ee51447aabd"
 
         def install
           bin.install "git-kommit"
@@ -61,10 +61,10 @@ class Kommit < Formula
         git kommit init
 
       Remember to set your OpenAI API key:
-        export OPENAI_API_KEY=your_openai_api_key
+        export OPENAI_API_KEY="sk-..."
 
       Or use a dedicated key for Kommit:
-        export KOMMIT_API_KEY=your_kommit_specific_key
+        export KOMMIT_OPENAI_API_KEY="sk-..."
     EOS
   end
 
